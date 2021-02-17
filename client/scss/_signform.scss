@@ -1,0 +1,42 @@
+.sign-form{
+   background-color: $secondColor;
+   border-radius: 2rem;
+   max-width: 50%;
+   margin: 2rem auto;
+   font-family: $MainFontstack;
+   form{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       padding: 2rem;
+       .input{
+           display: flex;
+           flex-direction: column;
+           padding: 0.5rem;
+           input{
+               font-size: 1.5rem;
+               border-radius: 0.5rem;
+           }
+       }
+       .submit-btn{
+           margin-top: 1rem;
+           width: 60%;
+           button{
+               border-radius: 1rem;
+               padding: 0.5rem;
+               width: 100%;
+               color: $secondTextColor;
+               background-color: $mainColor;
+           }
+           button:hover{
+               color: $mainTextColor;
+               background-color: $hoverColor;
+               cursor: pointer;
+           }
+       }
+       
+
+   }
+
+
+}

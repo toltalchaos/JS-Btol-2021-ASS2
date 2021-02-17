@@ -3,6 +3,7 @@
   background-color: #d4e09b;
   padding: 2rem;
   border-radius: 0 0 2rem 2rem;
+  font-family: "Kanit", sans-serif;
 }
 
 .banner ul {
@@ -34,6 +35,7 @@
   overflow: hidden;
   border-bottom: 1px dashed #283d3b;
   padding: 2rem 1rem 8rem 1rem;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .dash-main .container {
@@ -72,6 +74,63 @@
 
 .dash-main .container a:hover {
   background-color: #f3d3b3;
+}
+
+.sign-form {
+  background-color: #d4e09b;
+  border-radius: 2rem;
+  max-width: 50%;
+  margin: 2rem auto;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.sign-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+.sign-form form .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5rem;
+}
+
+.sign-form form .input input {
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.sign-form form .submit-btn {
+  margin-top: 1rem;
+  width: 60%;
+}
+
+.sign-form form .submit-btn button {
+  border-radius: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  color: #a44a3f;
+  background-color: #f6f4d2;
+}
+
+.sign-form form .submit-btn button:hover {
+  color: #283d3b;
+  background-color: #f3d3b3;
+  cursor: pointer;
 }
 
 body {
