@@ -1,0 +1,86 @@
+.banner {
+  color: #283d3b;
+  background-color: #d4e09b;
+  padding: 2rem;
+  border-radius: 0 0 2rem 2rem;
+}
+
+.banner ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0;
+  list-style: none;
+  padding: 1rem;
+}
+
+.banner ul a {
+  background-color: #f6f4d2;
+  color: #a44a3f;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+}
+
+.banner ul a:hover {
+  background-color: #f3d3b3;
+}
+
+.dash-main {
+  color: #283d3b;
+  overflow: hidden;
+  border-bottom: 1px dashed #283d3b;
+  padding: 2rem 1rem 8rem 1rem;
+}
+
+.dash-main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.dash-main .container h1 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+}
+
+.dash-main .container .landing-buttons a {
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+.dash-main .container .login-btn {
+  background-color: #d4e09b;
+  color: #283d3b;
+}
+
+.dash-main .container .signup-btn {
+  background-color: #a44a3f;
+  color: #f6f4d2;
+}
+
+.dash-main .container a:hover {
+  background-color: #f3d3b3;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f4d2;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=styles.css.map */

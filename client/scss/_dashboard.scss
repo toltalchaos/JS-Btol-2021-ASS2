@@ -1,0 +1,36 @@
+.dash-main{
+    color: $mainTextColor;
+    overflow: hidden;
+    border-bottom: 1px dashed $mainTextColor;
+    padding: 2rem 1rem 8rem 1rem;
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        h1{
+            flex-basis: 100%;
+            text-align: center;   
+        }
+        .landing-buttons a{
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 1rem;
+            margin: 1rem;
+        }
+        .login-btn{
+            background-color: $secondColor;
+            color: $mainTextColor;
+        }
+        .signup-btn{
+            background-color: $secondTextColor;
+            color: $mainColor;
+        }
+        a:hover{
+            background-color: $hoverColor;
+        }
+
+
+    }
+}

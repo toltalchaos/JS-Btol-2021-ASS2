@@ -1,0 +1,27 @@
+.banner{
+    color: $mainTextColor;
+    background-color: $secondColor;
+    padding: 2rem;
+    border-radius: 0 0 2rem 2rem;
+
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+        list-style: none;
+        padding: 1rem;
+        a{
+            background-color: $mainColor;
+            color: $secondTextColor;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+
+        }
+        a:hover{
+            background-color: $hoverColor;
+        }
+    }
+
+
+}

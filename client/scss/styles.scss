@@ -1,0 +1,13 @@
+@import "pallate";
+@import "banner";
+@import "dashboard";
+
+body{
+    margin: 0;
+    background-color: $mainColor;
+
+}
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+}
