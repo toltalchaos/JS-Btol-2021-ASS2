@@ -76,7 +76,7 @@
   background-color: #f3d3b3;
 }
 
-.sign-form {
+.form {
   background-color: #d4e09b;
   border-radius: 2rem;
   max-width: 50%;
@@ -84,7 +84,7 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
-.sign-form form {
+.form form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,7 +98,7 @@
   padding: 2rem;
 }
 
-.sign-form form .input {
+.form form .input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,17 +109,17 @@
   padding: 0.5rem;
 }
 
-.sign-form form .input input {
+.form form .input input {
   font-size: 1.5rem;
   border-radius: 0.5rem;
 }
 
-.sign-form form .submit-btn {
+.form form .submit-btn {
   margin-top: 1rem;
   width: 60%;
 }
 
-.sign-form form .submit-btn button {
+.form form .submit-btn button {
   border-radius: 1rem;
   padding: 0.5rem;
   width: 100%;
@@ -127,7 +127,7 @@
   background-color: #f6f4d2;
 }
 
-.sign-form form .submit-btn button:hover {
+.form form .submit-btn button:hover {
   color: #283d3b;
   background-color: #f3d3b3;
   cursor: pointer;
