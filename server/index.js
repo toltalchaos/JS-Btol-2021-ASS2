@@ -20,7 +20,20 @@ app.use(express.static(path.join(__dirname, "../client"), {extensions: ["html", 
 );
 
 //ADD HERE NEW PAGE ROUTING WITH  app.post('./ROUTE',(REQUEST,RESPONSE)=>{...res.sendFile(path.join(__dirname, "../client/dashboard.html"))}) 
+app.post('/signup', (request, response) => {
 
+    //logic to handle signup requests and redirect to the login page
+
+
+
+})
+
+app.post('/login', (request, response) => {
+  //logic to handle login filechecking and authentication then redirect to the dashboard
+
+
+
+})
 
 // Returns 404 Page from the client directory.
 app.use((req, res) => {
