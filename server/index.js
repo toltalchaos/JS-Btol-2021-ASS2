@@ -3,7 +3,8 @@ require('dotenv').config()
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
- 
+const filemanager = require('./service-files/filemanager')
+const loginauth = require('./service-files/loginmanager')
 
 // create an instance of express
 const app = express()
@@ -19,18 +20,22 @@ const PORT =  process.env.PORT || 5000
 app.use(express.static(path.join(__dirname, "../client"), {extensions: ["html", 'htm']})
 );
 
-//ADD HERE NEW PAGE ROUTING WITH  app.post('./ROUTE',(REQUEST,RESPONSE)=>{...res.sendFile(path.join(__dirname, "../client/dashboard.html"))}) 
 app.post('/signup', (request, response) => {
-
     //logic to handle signup requests and redirect to the login page
-
-
+  filemanager.writefiledata('../data/user-data.json', request.body) //write to this file, this obj to json obj
+  response.sendFile(path.join(__dirname, "../client/login.html"));//redirect
 
 })
 
 app.post('/login', (request, response) => {
   //logic to handle login filechecking and authentication then redirect to the dashboard
-
+    const userID = loginauth.authentication(request.body);
+    if(userID == undefined){
+      response.sendFile(path.join(__dirname, "../client/login.html"));
+    }
+    else{
+      response.sendFile(path.join(__dirname, "../client/dashboard.html"));
+    }
 
 
 })
