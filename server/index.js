@@ -10,7 +10,7 @@ const { request, response } = require('express');
 // create an instance of express
 const app = express()
  
-const PORT =  process.env.PORT || 5000 
+const PORT = 5000 
 
 //To get access to the name value pairs send in the message Body of POST Request.
  app.use(express.urlencoded({extended:true}))
@@ -54,11 +54,15 @@ app.post('/login', (request, response) => {
 })
 
 app.get('/dashboard', (request, response) => {
+  if(request.session.userID == undefined){
+    response.redirect('/login'); 
+    
 
-  //APPLY some logic to look for the user credentials in the request.session object 
-  let sessionobject = request.session;
-  response.render('dashboard.ejs', {sessionobject});
-
+  }
+  else{
+    let sessionobject = request.session;
+    response.render('dashboard.ejs', {sessionobject});
+  }
 })
 
 
