@@ -1,10 +1,11 @@
-
-require('dotenv').config()
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
+const session = require('express-session');
 const filemanager = require('./service-files/filemanager')
 const loginauth = require('./service-files/loginmanager')
+const ejs = require('ejs');
+const { request, response } = require('express');
 
 // create an instance of express
 const app = express()
@@ -15,6 +16,11 @@ const PORT =  process.env.PORT || 5000
  app.use(express.urlencoded({extended:true}))
  app.use(express.json())
  app.use(cors());
+app.use(session({secret: 'login-id', resave: false, saveUninitialized: false, })); //creating session and session perams 
+
+app.set('view engine', 'ejs'); //setting ejs as a rendering engine
+app.set('views', __dirname + '/views');
+
 
 //Middleware Serving Static Pages from client directory
 app.use(express.static(path.join(__dirname, "../client"), {extensions: ["html", 'htm']})
@@ -34,11 +40,27 @@ app.post('/login', (request, response) => {
       response.sendFile(path.join(__dirname, "../client/login.html"));
     }
     else{
-      response.sendFile(path.join(__dirname, "../client/dashboard.html"));
-    }
+      //save session user id 
+      request.session.userID = userID; //add user object to the session object
+      request.session.save( (err) => {
+        
+      })
+      //here.. send redirect to /dashboard and load in logic for using the session object 
+       response.redirect('/dashboard'); //WHY IN THE GOD DAMN FUCK DOES THE POST REQUEST NOT BECOME PICKED UP
+    
+  }
 
 
 })
+
+app.post('/dashboard', (request, response) => {
+
+  //APPLY some logic to look for the user credentials in the request.session object 
+  let sessionobject = request.session;
+  response.render('dashboard.ejs', {sessionobject});
+
+})
+
 
 // Returns 404 Page from the client directory.
 app.use((req, res) => {

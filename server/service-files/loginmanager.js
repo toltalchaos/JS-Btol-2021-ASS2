@@ -5,6 +5,7 @@
 const filemanager = require('./filemanager');
 
 
+
 exports.authentication = (credentials) => {
     const {username, password} = {...credentials};
     const users = filemanager.getfiledata('../data/user-data.json')
@@ -13,7 +14,7 @@ exports.authentication = (credentials) => {
     const UserID = users.find((user) =>{
         if(user.username == username && user.password == password){
             //console.log('FOUND USER');
-            return user.ID;
+            return user;
 
         }
         else{
@@ -26,3 +27,7 @@ exports.authentication = (credentials) => {
     return UserID;
  
 }
+
+
+
+
