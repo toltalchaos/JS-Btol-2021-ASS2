@@ -46,14 +46,14 @@ app.post('/login', (request, response) => {
         
       })
       //here.. send redirect to /dashboard and load in logic for using the session object 
-       response.redirect('/dashboard'); //WHY IN THE GOD DAMN FUCK DOES THE POST REQUEST NOT BECOME PICKED UP
+       response.redirect('/dashboard'); 
     
   }
 
 
 })
 
-app.post('/dashboard', (request, response) => {
+app.get('/dashboard', (request, response) => {
 
   //APPLY some logic to look for the user credentials in the request.session object 
   let sessionobject = request.session;
