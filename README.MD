@@ -35,4 +35,4 @@ this should open a local host server to interface with the application.
 https://www.npmjs.com/
 
 ### known bugs
-- the users.html page will bug out due to the .catch() being last in line and heroku likes to time out very quickly.
+- the users.html page will bug out if code is run on locla host. replace the commented out portion for the getdata in users.js for development
