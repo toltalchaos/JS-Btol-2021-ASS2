@@ -10,7 +10,7 @@ const { request, response } = require('express');
 // create an instance of express
 const app = express()
  
-const PORT = 5000 
+const PORT = process.env.PORT || 5000 
 
 //To get access to the name value pairs send in the message Body of POST Request.
  app.use(express.urlencoded({extended:true}))
