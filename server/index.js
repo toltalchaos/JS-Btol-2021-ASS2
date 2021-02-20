@@ -56,13 +56,17 @@ app.post('/login', (request, response) => {
 app.get('/dashboard', (request, response) => {
   if(request.session.userID == undefined){
     response.redirect('/login'); 
-    
-
   }
   else{
     let sessionobject = request.session;
     response.render('dashboard.ejs', {sessionobject});
   }
+})
+
+app.get('/api/users', (request, response) => {
+//logic to return API data in json format 
+response.send(filemanager.getfiledata('../data/user-data.json'));
+
 })
 
 

@@ -1,0 +1,36 @@
+
+.user-profiles{
+    background-color: $secondColor;
+    border-radius: 1rem;
+    margin: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: $secondFontStack;
+    color: $secondTextColor;
+
+    .user{
+        background-color: $mainColor;
+        border-radius: 1rem;
+        margin: 1rem;
+        flex-basis: 45%;
+        .name{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .email{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .id{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+
+}
