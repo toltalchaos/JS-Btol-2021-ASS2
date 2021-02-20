@@ -7,7 +7,7 @@ const herokuurl = 'https://btol-js-assignment2.herokuapp.com'
 window.addEventListener('load', async (evnt) =>{
     let element = '';
     const usercontainer = document.querySelector('.user-profiles');
-    const usersobj = await getUserdata(tempurl + '/api/users').catch(getUserdata(herokuurl + '/api/users'))
+    const usersobj = await getUserdata(herokuurl + '/api/users'); //getUserdata(tempurl + '/api/users');
 
     for (var user of usersobj) 
     {
