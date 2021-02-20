@@ -1,4 +1,4 @@
-### app is live at - 
+### app is live at - https://btol-js-assignment2.herokuapp.com/
 
 # Braydon Tol - ASS02
 
@@ -26,11 +26,13 @@ this should open a local host server to interface with the application.
 
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "uuid": "^8.3.2"
 
 
 https://www.npmjs.com/
 
 ### known bugs
--
+- the users.html page will bug out due to the .catch() being last in line and heroku likes to time out very quickly.

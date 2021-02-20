@@ -1,12 +1,13 @@
 
-const tempurl = 'http://localhost:5000';
+const tempurl = `http://localhost:${5000}`;
+const herokuurl = 'https://btol-js-assignment2.herokuapp.com'
 
 
 
 window.addEventListener('load', async (evnt) =>{
     let element = '';
     const usercontainer = document.querySelector('.user-profiles');
-    const usersobj = await getUserdata('/api/users')
+    const usersobj = await getUserdata(tempurl + '/api/users').catch(getUserdata(herokuurl + '/api/users'))
 
     for (var user of usersobj) 
     {
@@ -37,9 +38,8 @@ window.addEventListener('load', async (evnt) =>{
 
 async function getUserdata(url){
 
-    const request = await fetch(tempurl + url);
-    const response = await request.json();
-    return response;
+    const request = await fetch(url).then(res => res.json())
+    return request;
 
 }
 const PrintElement = (container, element) => {
